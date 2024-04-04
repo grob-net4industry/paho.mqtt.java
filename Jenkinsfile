@@ -6,25 +6,25 @@ pipeline {
         pollSCM('H/5 * * * 1-6')
     }
     stages {
-    stage('Start mqtt broker')
-    {
-        steps {
-         sh './start-broker.sh'
-        }
-    }
-    stage('Build') {
-        steps {
-            withMaven(maven: 'Maven 3.8.1') {
-                sh 'mvn clean package'
+        stage('Start mqtt broker')
+        {
+            steps {
+             sh './start-broker.sh'
             }
         }
-    }
-    stage('Deploy') {
-        steps {
-            withMaven(maven: 'Maven 3.8.1') {
-                sh 'mvn install'
+        stage('Build') {
+            steps {
+                withMaven(maven: 'Maven 3.8.1') {
+                    sh 'mvn clean package'
+                }
             }
         }
-
+        stage('Deploy') {
+            steps {
+                withMaven(maven: 'Maven 3.8.1') {
+                    sh 'mvn install'
+                }
+            }
+        }
     }
 }
