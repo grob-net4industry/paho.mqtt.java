@@ -62,11 +62,14 @@
         </license>
     </licenses>
 
+<!--
     <scm>
             <url>https://github.com/eclipse/paho.mqtt.java.git</url>
             <connection>scm:git:git@github.com:eclipse/paho.mqtt.java.git</connection>
     </scm>
+-->
 
+<!--
     <distributionManagement>
         <repository>
             <id>repo.eclipse.org</id>
@@ -77,6 +80,27 @@
             <id>repo.eclipse.org</id>
             <name>Paho Repository - Snapshots</name>
             <url>https://repo.eclipse.org/content/repositories/paho-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+-->
+
+    <scm>
+        <url>https://github.com/grob-net4industry/paho.mqtt.java</url>
+        <developerConnection>scm:git:https://github.com/grob-net4industry/paho.mqtt.java.git</developerConnection>
+    </scm>
+
+    <!-- distribution management section for uploading artifacts to the remote location -->
+    <distributionManagement>
+        <repository>
+            <id>grob_release</id>
+            <name>Grob Maven2 Release Repository</name>
+            <url>${maven.grob.repository.release.remote}</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>grob_snapshot</id>
+            <name>Grob Maven2 Snapshot Repository</name>
+            <url>${maven.grob.repository.snapshot.remote}</url>
         </snapshotRepository>
     </distributionManagement>
 
