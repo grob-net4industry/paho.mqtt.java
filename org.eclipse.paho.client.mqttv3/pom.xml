@@ -24,10 +24,10 @@
                         </execution>
                     </executions>
                 </plugin>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-maven-plugin</artifactId>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.eclipse.tycho</groupId>-->
+<!--                <artifactId>tycho-maven-plugin</artifactId>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>templating-maven-plugin</artifactId>
@@ -68,15 +68,15 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
-                <artifactId>tycho-compiler-plugin</artifactId>
-                <version>${tycho.version}</version>
-                <configuration>
-                    <source>${mqttclient.java.version}</source>
-                    <target>${mqttclient.java.version}</target>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.eclipse.tycho</groupId>-->
+<!--                <artifactId>tycho-compiler-plugin</artifactId>-->
+<!--                <version>${tycho.version}</version>-->
+<!--                <configuration>-->
+<!--                    <source>${mqttclient.java.version}</source>-->
+<!--                    <target>${mqttclient.java.version}</target>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
                  
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
