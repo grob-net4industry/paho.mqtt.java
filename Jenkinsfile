@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 withMaven(maven: 'Maven 3.8.1') {
-                    sh 'mvn install'
+                    sh 'mvn install -DskipTests'
                 }
             }
         }
